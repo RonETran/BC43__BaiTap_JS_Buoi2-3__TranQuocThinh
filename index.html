@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập JS buổi 2-3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="list">
+        <ul>
+          <li onclick="baiTapMot()">Bài 1</li>
+          <li onclick="baiTapHai()">Bài 2</li>
+          <li onclick="baiTapBa()">Bài 3</li>
+          <li onclick="baiTapBon()">Bài 4</li>
+          <li onclick="baiTapNam()">Bài 5</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="baiMot" class="baitap">
+          <h2>Bài tập 1: Tính tiền lương</h1>
+          <p>Lương một ngày: 100,000</p>
+          <input id="soNgayLam" placeholder="Số ngày làm" type="number"/>
+          <br />
+          <button onclick="tinhTienLuong()">
+            Tính tiền lương
+          </button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="tienLuong"></span>
+          </div>
+        </div>
+
+        <div id="baiHai" class="baitap" style="display: none;">
+          <h2>Bài tập 2: Tính giá trị trung bình</h2>
+          <input id="soThuNhat" placeholder="Số thứ nhất" type="number">
+          <input id="soThuHai" placeholder="Số thứ hai" type="number">
+          <input id="soThuBa" placeholder="Số thứ ba" type="number">
+          <input id="soThuTu" placeholder="Số thứ tư" type="number">
+          <input id="soThuNam" placeholder="Số thứ năm" type="number">
+          <br>
+          <button onclick="tinhDiemTrungBinh()">Kết quả</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="trungBinh"></span>
+          </div>  
+        </div>
+
+        <div id="baiBa" class="baitap" style="display: none;">
+          <h2>Bài tập 3: Quy đổi tiền</h2>
+          <p>1 USD = 23,500 VND</p>
+          <input id="soUsd" placeholder="Nhập số USD" type="number">
+          <br>
+          <button onclick="quyDoiTien()">Quy đổi sang VND</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="soVnd"></span> VND
+          </div>
+        </div>
+
+        <div id="baiBon" class="baitap" style="display: none;">
+          <h2>Bài tập 4: Tính diện tích, chu vi của hình chữ nhật</h2>
+          <input id="chieuDai" placeholder="Nhập chiều dài" type="number">
+          <input id="chieuRong" placeholder="Nhập chiều rộng" type="number">
+          <br>
+          <button onclick="tinhDienTich()" >Tính diện tích</button> 
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="dienTich"></span>
+          </div>
+          <button onclick="tinhChuVi()">Tính chu vi</button> 
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="chuVi"></span>
+          </div>
+        </div>
+
+        <div id="baiNam" class="baitap" style="display: none;">
+          <h2>Bài tập 5: Tính tổng 2 ký số</h2>
+          <input id="nhapSo" placeholder="Nhập số có 2 chữ số" type="number">
+          <br>
+          <button onclick="tinhTongKySo()">Tổng 2 ký số</button>
+          <div class="ketQua">
+            <i class="fa fa-angle-right"></i> <span id="tongKySo"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
